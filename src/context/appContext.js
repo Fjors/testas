@@ -23,7 +23,7 @@ const initialState = {
 };
 
 const client_id = process.env.REACT_APP_UNSPLASH_KEY;
-const redirect_uri = "http://localhost:3000/";
+const redirect_uri = "https://poetic-sundae-d9daa2.netlify.app";
 const api_auth_uri = "https://unsplash.com/oauth/authorize";
 const api_token_uri = "https://unsplash.com/oauth/token";
 const response_type = "code";
