@@ -1,0 +1,14 @@
+@use "variables" as *;
+
+%btn {
+  padding: 10px 20px;
+  max-width: 100px;
+  width: 100%;
+  height: 50px;
+  color: $button-txt-color;
+  border-radius: 5px;
+  border: none;
+  background-color: $button-color;
+  font-size: 1rem;
+  cursor: pointer;
+}

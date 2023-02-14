@@ -1,0 +1,11 @@
+@use "abstracts" as *;
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 60px;
+  background-color: $footer-bg-color;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,59 @@
+@use "abstracts" as *;
+.result {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 100vh;
+  padding: 2rem 0rem 1rem 0rem;
+  margin: 0 auto;
+  .my-masonry-grid {
+    display: flex;
+    width: auto;
+  }
+  .my-masonry-grid_column {
+    background-clip: padding-box;
+    .imageWrapper {
+      margin: 0.8rem;
+      position: relative;
+
+      &:hover::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 16px;
+        background-color: $image-hover-bg;
+      }
+      &:hover .like {
+        visibility: visible;
+      }
+      .like {
+        visibility: hidden;
+        width: 45px;
+        height: 35px;
+        position: absolute;
+        right: 20px;
+        bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        z-index: 9999;
+        cursor: grab;
+        @include smMaxBreakPoint {
+          width: 30px;
+          height: 25px;
+        }
+        svg path {
+          color: #767676;
+        }
+      }
+
+      img {
+        width: 100%;
+
+        margin-bottom: 0.7rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "variables" as *;
+
+@mixin smMaxBreakPoint {
+  @media screen and (max-width: #{$screen-mobile-sm}) {
+    @content;
+  }
+}
+
+@mixin mdMaxBreakPoint {
+  @media screen and (max-width: #{$screen-mobile-md}) {
+    @content;
+  }
+}
+
+@mixin customMaxBreakPoint($size) {
+  @media screen and (max-width: $size+"px") {
+    @content;
+  }
+}

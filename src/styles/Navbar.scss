@@ -1,0 +1,132 @@
+@use "abstracts" as *;
+
+.login {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  min-height: 5px;
+  background-color: $navBar-bg;
+  font-size: 0.8rem;
+
+  @include customMaxBreakPoint(780) {
+    padding: 1rem;
+  }
+  .loginWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include customMaxBreakPoint(780) {
+      display: none;
+    }
+    .menu {
+      cursor: grab;
+      font-size: 1rem;
+      width: 100%;
+      min-height: 40px;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      flex-wrap: wrap;
+
+      padding: 0rem 0rem 0rem 1rem;
+
+      p {
+        padding-left: 1rem;
+      }
+    }
+
+    .loginBtn {
+      display: flex;
+      justify-content: flex-end;
+
+      max-width: 190px;
+      width: 100%;
+
+      button {
+        @extend %btn;
+        height: 40px;
+        padding: 5px;
+        max-width: 75px;
+        width: 100%;
+        margin: 0 0.5rem 0rem 0.5rem;
+        @include mdMaxBreakPoint {
+          margin: 0rem;
+        }
+        &:hover {
+          color: rgb(255, 255, 255);
+          background-color: $button-hover;
+        }
+        &:focus {
+          outline: none !important;
+        }
+      }
+    }
+    .logoutBtn {
+      display: flex;
+
+      align-items: center;
+
+      .username {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-width: 100px;
+        width: 100%;
+        min-height: 40px;
+        white-space: nowrap;
+        padding: 0rem 0rem 0rem 1.5rem;
+        font-size: 1rem;
+        @include customMaxBreakPoint(980) {
+          display: none;
+        }
+
+        p {
+          color: $username-color;
+          span {
+            color: $username-color;
+          }
+        }
+      }
+
+      button {
+        @extend %btn;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+
+        max-width: 85px;
+        width: 100%;
+        margin: 0 0.5rem 0rem 1.5rem;
+
+        @include mdMaxBreakPoint {
+          margin: 0rem;
+        }
+        &:hover {
+          color: rgb(255, 255, 255);
+          background-color: $button-hover;
+        }
+        &:focus {
+          outline: none !important;
+        }
+      }
+      img {
+        border-radius: 50%;
+        width: 35px;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+  .mobileMenuBtn {
+    display: none;
+    @include customMaxBreakPoint(780) {
+      display: block;
+      margin-top: 10px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+  }
+}

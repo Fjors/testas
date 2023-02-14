@@ -1,0 +1,112 @@
+@use "abstracts" as *;
+
+.dropDownContainer {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: $drop-down-container-bg;
+  display: grid;
+  align-items: center;
+  top: 0;
+  left: 0;
+  transition: 0.4s ease-in-out;
+  .icon {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    background: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+    outline: none;
+  }
+  .dropDownMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    .dropDownLink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+
+      p {
+        font-size: 1.3rem;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+  .dropDownLoginBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    button {
+      @extend %btn;
+      height: 45px;
+      padding: 5px;
+      max-width: 85px;
+      width: 100%;
+      margin: 0.5rem;
+
+      &:hover {
+        color: rgb(255, 255, 255);
+        background-color: $button-hover;
+      }
+      &:focus {
+        outline: none !important;
+      }
+    }
+  }
+  .dropDownlogoutBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem 1rem 1rem;
+    @include customMaxBreakPoint(350) {
+      padding: 1rem;
+    }
+    .dropDownUsername {
+      padding-bottom: 1.5rem;
+      font-size: 1rem;
+      p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    img {
+      border-radius: 50%;
+      width: 55px;
+      margin-bottom: 2rem;
+      @include smMaxBreakPoint {
+        display: none;
+      }
+    }
+    button {
+      @extend %btn;
+      height: 40px;
+      padding: 5px;
+      max-width: 85px;
+      width: 100%;
+      margin: 0.5rem;
+
+      @include mdMaxBreakPoint {
+        margin: 0rem;
+      }
+      &:hover {
+        color: rgb(255, 255, 255);
+        background-color: $button-hover;
+      }
+      &:focus {
+        outline: none !important;
+      }
+    }
+  }
+}
